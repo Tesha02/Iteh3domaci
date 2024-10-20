@@ -137,40 +137,42 @@
             </div>
         </div>
 
-        <!-- Izmeni Modal -->
-        <div class="modal fade" id="izmeniModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h3 class="modal-title text-center">Izmeni kolokvijum</h3>
+        <!-- Modal za izmenu prijave -->
+<div class="modal fade" id="izmeniModal" tabindex="-1" aria-labelledby="izmeniModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" action="">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="izmeniModalLabel">Izmeni prijavu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="id" id="id_prijave">
+                    <div class="form-group">
+                        <label for="predmet">Predmet</label>
+                        <input type="text" name="predmet" id="predmet" class="form-control" required>
                     </div>
-                    <div class="modal-body">
-                        <form action="#" method="post" id="izmeniForm">
-                            <input id="id_predmeta" type="hidden" name="id_predmeta" readonly>
-                            <div class="form-group">
-                                <label>Predmet</label>
-                                <input id="predmet" type="text" name="predmet" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Katedra</label>
-                                <input id="katedra" type="text" name="katedra" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Sala</label>
-                                <input id="sala" type="text" name="sala" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Datum</label>
-                                <input id="datum" type="date" name="datum" class="form-control" required>
-                            </div>
-                            <button type="submit" name="submit" value="izmeni" id="btnIzmeniModal" class="btn btn-success btn-block">Izmeni</button>
-                        </form>
+                    <div class="form-group">
+                        <label for="katedra">Katedra</label>
+                        <input type="text" name="katedra" id="katedra" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sala">Sala</label>
+                        <input type="text" name="sala" id="sala" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="datum">Datum</label>
+                        <input type="date" name="datum" id="datum" class="form-control" required>
                     </div>
                 </div>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+                    <button type="submit" class="btn btn-primary" name="submit" value="azuriraj">Ažuriraj</button>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
     <!-- Bootstrap and jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
